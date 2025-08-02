@@ -4,9 +4,7 @@ openai
 PyMuPDF
 streamlit
 requests
-python-dotenv
 sentence-transformers
 faiss-cpu
 python-multipart
-python-dotenv
 logging
