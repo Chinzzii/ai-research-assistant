@@ -5,7 +5,6 @@ from backend.summarizer import summarize_pdf
 from backend.chatbot import ask_question
 from backend.vector_store import store_embedding, get_similar_papers
 from backend.utils import extract_title_from_pdf
-import logging
 
 app = FastAPI()
 
@@ -26,7 +25,6 @@ async def summarize(file: UploadFile = File(...), title: str = Form(...)):
         store_embedding(title, summary)
         return {"summary": summary}
     except Exception as e:
-        logging.error(f"Error during summarization: {e}")
         return JSONResponse(status_code=500, content={"error": "Summarization failed"})
 
 @app.post("/chat")

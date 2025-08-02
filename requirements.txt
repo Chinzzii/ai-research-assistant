@@ -7,4 +7,3 @@ requests
 sentence-transformers
 faiss-cpu
 python-multipart
-logging
