@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source venv/Scripts/activate
+# source venv/Scripts/activate
 
 # Start backend
 echo "Starting FastAPI backend..."

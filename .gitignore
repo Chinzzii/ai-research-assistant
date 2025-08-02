@@ -1,1 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+venv/
 .env
+
+# Terraform
+terraform/terraform.tfvars
+*.tfstate
+*.tfstate.backup
+.terraform/
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+
+# Logs
+*.log
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Other
+*.pytest_cache/
