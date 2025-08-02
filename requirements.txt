@@ -4,6 +4,6 @@ openai
 PyMuPDF
 streamlit
 requests
-sentence-transformers
-faiss-cpu
+sentence-transformers==2.2.2
+faiss-cpu==1.7.2
 python-multipart
