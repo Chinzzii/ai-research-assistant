@@ -25,8 +25,8 @@ pip install --upgrade pip
 pip uninstall -y numpy
 pip install "numpy<2.0"
 
-# Install Python dependencies
-pip install -r requirements.txt
+# Install Python dependencies with CPU-only PyTorch mirror
+pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cpu
 
 # Add pip binaries to PATH for future sessions
 echo 'export PATH=$PATH:/home/ubuntu/ai-research-assistant/venv/bin' >> /home/ubuntu/.bashrc
