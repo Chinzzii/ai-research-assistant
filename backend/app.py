@@ -4,7 +4,6 @@ from fastapi.responses import JSONResponse
 from backend.summarizer import summarize_pdf
 from backend.chatbot import ask_question
 from backend.vector_store import store_embedding, get_similar_papers
-from backend.utils import extract_title_from_pdf
 
 app = FastAPI()
 

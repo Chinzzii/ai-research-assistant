@@ -1,6 +1,5 @@
 import faiss
 import numpy as np
-import os
 from sentence_transformers import SentenceTransformer
 
 # In-memory DB for demo purposes
