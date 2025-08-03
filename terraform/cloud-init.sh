@@ -17,6 +17,10 @@ source venv/bin/activate
 # Upgrade pip inside venv
 pip install --upgrade pip
 
+# Fix numpy compatibility for faiss
+pip3 uninstall -y numpy
+pip3 install numpy<2.0
+
 # Install dependencies
 pip install -r requirements.txt
 

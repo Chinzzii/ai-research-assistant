@@ -2,11 +2,6 @@ provider "aws" {
   region = "us-east-1"
 }
 
-variable "openai_api_key" {
-  type      = string
-  sensitive = true
-}
-
 resource "aws_key_pair" "deployer" {
   key_name   = "research-key"
   public_key = file("${pathexpand("~/.ssh/id_rsa.pub")}")
