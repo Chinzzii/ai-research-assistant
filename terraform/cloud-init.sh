@@ -5,11 +5,10 @@ set -e
 # Update and install required system packages
 sudo apt update && sudo apt install -y python3-pip python3-venv git unzip
 
-# Set working directory
 cd /home/ubuntu
-
-# Clone the repo
-git clone https://github.com/Chinzzii/ai-research-assistant.git
+if [ ! -d "ai-research-assistant" ]; then
+        git clone https://github.com/Chinzzii/ai-research-assistant.git  
+fi
 cd ai-research-assistant
 
 # Create virtual environment
@@ -26,7 +25,7 @@ pip uninstall -y numpy
 pip install "numpy<2.0"
 
 # Install Python dependencies with CPU-only PyTorch mirror
-pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cpu
+pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
 
 # Add pip binaries to PATH for future sessions
 echo 'export PATH=$PATH:/home/ubuntu/ai-research-assistant/venv/bin' >> /home/ubuntu/.bashrc
